@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektron Kitabxana - Kitablar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-book"></i> Elektron Kitabxana</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Səhifə</a></li>
+                    <li><a href="books.html" class="active">Kitablar</a></li>
+                    <li><a href="login.html">Giriş</a></li>
+                    <li><a href="register.html">Qeydiyyat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="books-header">
+        <div class="container">
+            <h2>Kitablarımız</h2>
+            <div class="search-filter">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Kitab axtar...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <select id="categoryFilter">
+                        <option value="">Bütün janrlar</option>
+                        <option value="roman">Roman</option>
+                        <option value="detektiv">Detektiv</option>
+                        <option value="bioqrafiya">Bioqrafiya</option>
+                        <option value="fantastika">Fantastika</option>
+                        <option value="tarix">Tarix</option>
+                        <option value="elm">Elm</option>
+                    </select>
+                    <select id="sortFilter">
+                        <option value="popular">Populyarlığa görə</option>
+                        <option value="new">Ən yeni</option>
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="books-list">
+        <div class="container">
+            <div class="book-grid">
+                <!-- 1-ci Kitab -->
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="https://novella.az/wp-content/uploads/2020/06/Webp.net-compress-image229.jpg"
+                            alt="Qürur və qərəz">
+                        <div class="book-available">Mövcuddur</div>
+                    </div>
+                    <div class="book-details">
+                        <h3>Qürur və qərəz</h3>
+                        <p class="author">Jane Austen</p>
+                        <p class="category">Janr: Roman</p>
+                        <div class="book-info-row">
+                            <span><i class="fas fa-calendar-alt"></i> 1813</span>
+                            <span><i class="fas fa-file-alt"></i> 432 səh.</span>
+                        </div>
+                        <p class="book-desc">Elizabet Bennet və Mr. Darcy arasındakı sevgi hekayəsi...</p>
+                        <div class="book-actions">
+                            <button class="btn btn-sm order-btn" data-book-id="1">Sifariş et</button>
+                            <button class="btn btn-sm btn-outline details-btn" data-book-id="1">Ətraflı</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-ci Kitab -->
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/800px-The_Great_Gatsby_Cover_1925_Retouched.jpg"
+                            alt="Böyük Gatsby">
+                        <div class="book-available">Mövcuddur</div>
+                    </div>
+                    <div class="book-details">
+                        <h3>Böyük Gatsby</h3>
+                        <p class="author">F. Scott Fitzgerald</p>
+                        <p class="category">Janr: Roman</p>
+                        <div class="book-info-row">
+                            <span><i class="fas fa-calendar-alt"></i> 1925</span>
+                            <span><i class="fas fa-file-alt"></i> 218 səh.</span>
+                        </div>
+                        <p class="book-desc">Amerika cəmiyyətinin maddi zənginliyinə tənqidi baxış...</p>
+                        <div class="book-actions">
+                            <button class="btn btn-sm order-btn" data-book-id="2">Sifariş et</button>
+                            <button class="btn btn-sm btn-outline details-btn" data-book-id="2">Ətraflı</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-cü Kitab -->
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="https://static.insales-cdn.com/images/products/1/166/249495718/SHERLOK_HOLMS_kitab_uzu.png"
+                            alt="Şerlok Holms">
+                        <div class="book-available">Mövcuddur</div>
+                    </div>
+                    <div class="book-details">
+                        <h3>Şerlok Holmsun macəraları</h3>
+                        <p class="author">Arthur Conan Doyle</p>
+                        <p class="category">Janr: Detektiv</p>
+                        <div class="book-info-row">
+                            <span><i class="fas fa-calendar-alt"></i> 1892</span>
+                            <span><i class="fas fa-file-alt"></i> 307 səh.</span>
+                        </div>
+                        <p class="book-desc">Məşhur dedektivin həll etdiyi cinayət hadisələri...</p>
+                        <div class="book-actions">
+                            <button class="btn btn-sm order-btn" data-book-id="3">Sifariş et</button>
+                            <button class="btn btn-sm btn-outline details-btn" data-book-id="3">Ətraflı</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4-cü Kitab -->
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/az/a/a5/Corc_Oruell._1984.jpg" alt="1984">
+                        <div class="book-not-available">Mövcud deyil</div>
+                    </div>
+                    <div class="book-details">
+                        <h3>1984</h3>
+                        <p class="author">George Orwell</p>
+                        <p class="category">Janr: Fantastika</p>
+                        <div class="book-info-row">
+                            <span><i class="fas fa-calendar-alt"></i> 1949</span>
+                            <span><i class="fas fa-file-alt"></i> 328 səh.</span>
+                        </div>
+                        <p class="book-desc">Totalitar cəmiyyət haqqında distopik roman...</p>
+                        <div class="book-actions">
+                            <button class="btn btn-sm order-btn" data-book-id="4" disabled>Sifariş et</button>
+                            <button class="btn btn-sm btn-outline details-btn" data-book-id="4">Ətraflı</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-ci Kitab -->
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Caspianseamap.png"
+                            alt="Xəzər dənizi">
+                        <div class="book-available">Mövcuddur</div>
+                    </div>
+                    <div class="book-details">
+                        <h3>Xəzər dənizi</h3>
+                        <p class="author">Məhəmməd Əsədullazadə</p>
+                        <p class="category">Janr: Tarix</p>
+                        <div class="book-info-row">
+                            <span><i class="fas fa-calendar-alt"></i> 2010</span>
+                            <span><i class="fas fa-file-alt"></i> 245 səh.</span>
+                        </div>
+                        <p class="book-desc">Xəzər dənizinin tarixi və mədəni əhəmiyyəti...</p>
+                        <div class="book-actions">
+                            <button class="btn btn-sm order-btn" data-book-id="5">Sifariş et</button>
+                            <button class="btn btn-sm btn-outline details-btn" data-book-id="5">Ətraflı</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6-cı Kitab -->
+                <div class="book-item">
+                    <div class="book-cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/az/8/83/%C6%8Fli_v%C9%99_Nino.jpg"
+                            alt="Əli və Nino">
+                        <div class="book-available">Mövcuddur</div>
+                    </div>
+                    <div class="book-details">
+                        <h3>Əli və Nino</h3>
+                        <p class="author">Qurban Səid</p>
+                        <p class="category">Janr: Roman</p>
+                        <div class="book-info-row">
+                            <span><i class="fas fa-calendar-alt"></i> 1937</span>
+                            <span><i class="fas fa-file-alt"></i> 288 səh.</span>
+                        </div>
+                        <p class="book-desc">Şərq və Qərb mədəniyyətlərinin kəsişməsində bir sevgi hekayəsi...</p>
+                        <div class="book-actions">
+                            <button class="btn btn-sm order-btn" data-book-id="6">Sifariş et</button>
+                            <button class="btn btn-sm btn-outline details-btn" data-book-id="6">Ətraflı</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="next">Növbəti &raquo;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitab Detalları Modalı -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Kitab şəkli" />
+            <h2 id="modalTitle">Kitab Adı</h2>
+            <p id="modalAuthor">Müəllif</p>
+            <p id="modalCategory">Janr</p>
+            <p id="modalYear">İl</p>
+            <p id="modalPages">Səhifə sayı</p>
+            <p id="modalDesc">Açıqlama</p>
+            <p id="modalStatus">Status</p>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("bookModal");
+        const modalClose = document.querySelector(".modal-close");
+
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalAuthor = document.getElementById("modalAuthor");
+        const modalCategory = document.getElementById("modalCategory");
+        const modalYear = document.getElementById("modalYear");
+        const modalPages = document.getElementById("modalPages");
+        const modalDesc = document.getElementById("modalDesc");
+        const modalStatus = document.getElementById("modalStatus");
+
+        document.querySelectorAll(".details-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const bookItem = button.closest(".book-item");
+                modalImage.src = bookItem.querySelector("img").src;
+                modalTitle.textContent = bookItem.querySelector("h3").textContent;
+                modalAuthor.textContent = "Müəllif: " + bookItem.querySelector(".author").textContent;
+                modalCategory.textContent = bookItem.querySelector(".category").textContent;
+                modalYear.textContent = bookItem.querySelector(".fa-calendar-alt").parentElement.textContent.trim();
+                modalPages.textContent = bookItem.querySelector(".fa-file-alt").parentElement.textContent.trim();
+                modalDesc.textContent = bookItem.querySelector(".book-desc").textContent;
+                modalStatus.textContent = "Status: " + bookItem.querySelector(".book-available").textContent;
+
+                modal.style.display = "block";
+            });
+        });
+
+        modalClose.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", e => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-book"></i> Elektron Kitabxana</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Keçidlər</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="books.html">Kitablar</a></li>
+                        <li><a href="login.html">Giriş</a></li>
+                        <li><a href="register.html">Qeydiyyat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Sosial şəbəkələr</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Elektron Kitabxana. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+<script src="main.js"></script>
+</body>
+
+</html>

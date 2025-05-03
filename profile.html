@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektron Kitabxana - Profilim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-book"></i> Elektron Kitabxana</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Səhifə</a></li>
+                    <li><a href="books.html">Kitablar</a></li>
+                    <li class="profile-menu">
+                        <a href="profile.html" class="active">Hesabım <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="profile.html">Profilim</a></li>
+                            <li><a href="profile.html#orders">Sifarişlərim</a></li>
+                            <li><a href="#" id="logoutBtn">Çıxış</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="container">
+            <div class="profile-header">
+                <h2>Mənim Hesabım</h2>
+            </div>
+
+            <div class="profile-tabs">
+                <div class="tab-links">
+                    <a href="#personal-info" class="tab-link active" data-tab="personal-info">Şəxsi məlumatlar</a>
+                    <a href="#orders" class="tab-link" data-tab="orders">Sifarişlərim</a>
+                    <a href="#change-password" class="tab-link" data-tab="change-password">Şifrəni dəyiş</a>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Şəxsi məlumatlar bölməsi -->
+                    <div id="personal-info" class="tab-pane active">
+                        <div class="profile-card">
+                            <div class="profile-card-header">
+                                <h3>Şəxsi məlumatlar</h3>
+                                <button id="editProfileBtn" class="btn btn-sm"><i class="fas fa-edit"></i> Redaktə
+                                    et</button>
+                            </div>
+                            <div class="profile-info">
+                                <div class="profile-info-item">
+                                    <div class="profile-info-label">Ad Soyad:</div>
+                                    <div class="profile-info-value" id="profileName">Əli Məmmədov</div>
+                                </div>
+                                <div class="profile-info-item">
+                                    <div class="profile-info-label">E-poçt:</div>
+                                    <div class="profile-info-value" id="profileEmail">ali.mammadov@mail.com</div>
+                                </div>
+                                <div class="profile-info-item">
+                                    <div class="profile-info-label">Telefon:</div>
+                                    <div class="profile-info-value" id="profilePhone">+994 50 123 45 67</div>
+                                </div>
+                                <div class="profile-info-item">
+                                    <div class="profile-info-label">Ünvan:</div>
+                                    <div class="profile-info-value" id="profileAddress">Bakı şəhəri, Yasamal rayonu,
+                                        Həsən bəy Zərdabi küçəsi 15</div>
+                                </div>
+                                <div class="profile-info-item">
+                                    <div class="profile-info-label">Qeydiyyat tarixi:</div>
+                                    <div class="profile-info-value" id="profileRegDate">12.03.2025</div>
+                                </div>
+                            </div>
+
+                            <!-- Redaktə formu (gizli) -->
+                            <form id="editProfileForm" class="edit-profile-form hidden">
+                                <div class="form-group">
+                                    <label for="editName">Ad Soyad</label>
+                                    <input type="text" id="editName" name="editName" value="Əli Məmmədov">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editEmail">E-poçt</label>
+                                    <input type="email" id="editEmail" name="editEmail" value="ali.mammadov@mail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPhone">Telefon</label>
+                                    <input type="tel" id="editPhone" name="editPhone" value="+994 50 123 45 67">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editAddress">Ünvan</label>
+                                    <textarea id="editAddress" name="editAddress"
+                                        rows="3">Bakı şəhəri, Yasamal rayonu, Həsən bəy Zərdabi küçəsi 15</textarea>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn">Yadda saxla</button>
+                                    <button type="button" id="cancelEditBtn" class="btn btn-outline">Ləğv et</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Sifarişlər bölməsi -->
+                    <div id="orders" class="tab-pane">
+                        <div class="profile-card">
+                            <h3>Sifarişlərim</h3>
+                            <div class="orders-list">
+                                <!-- 1-ci Sifariş -->
+                                <div class="order-item">
+                                    <div class="order-header">
+                                        <div class="order-id">Sifariş #235789</div>
+                                        <div class="order-date">15.04.2025</div>
+                                        <div class="order-status success">Təhvil verilib</div>
+                                    </div>
+                                    <div class="order-books">
+                                        <div class="order-book">
+                                            <div class="order-book-image">
+                                                <img src="/api/placeholder/100/150" alt="Kitab adı">
+                                            </div>
+                                            <div class="order-book-details">
+                                                <h4>Əli və Nino</h4>
+                                                <p class="book-author">Qurban Səid</p>
+                                                <p class="book-return">Qaytarılma tarixi: <span
+                                                        class="success">25.04.2025</span></p>
+                                            </div>
+                                            <div class="order-book-action">
+                                                <button class="btn btn-sm btn-outline">Qaytarmaq</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2-ci Sifariş -->
+                                <div class="order-item">
+                                    <div class="order-header">
+                                        <div class="order-id">Sifariş #235680</div>
+                                        <div class="order-date">10.04.2025</div>
+                                        <div class="order-status warning">Gözləmədə</div>
+                                    </div>
+                                    <div class="order-books">
+                                        <div class="order-book">
+                                            <div class="order-book-image">
+                                                <img src="/api/placeholder/100/150" alt="Kitab adı">
+                                            </div>
+                                            <div class="order-book-details">
+                                                <h4>Şerlok Holmsun macəraları</h4>
+                                                <p class="book-author">Arthur Conan Doyle</p>
+                                                <p class="book-status">Status: <span class="warning">Hazırlanır</span>
+                                                </p>
+                                            </div>
+                                            <div class="order-book-action">
+                                                <button class="btn btn-sm btn-outline">Ləğv et</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3-cü Sifariş -->
+                                <div class="order-item">
+                                    <div class="order-header">
+                                        <div class="order-id">Sifariş #235489</div>
+                                        <div class="order-date">01.04.2025</div>
+                                        <div class="order-status danger">Vaxtı bitmiş</div>
+                                    </div>
+                                    <div class="order-books">
+                                        <div class="order-book">
+                                            <div class="order-book-image">
+                                                <img src="/api/placeholder/100/150" alt="Kitab adı">
+                                            </div>
+                                            <div class="order-book-details">
+                                                <h4>Qürur və qərəz</h4>
+                                                <p class="book-author">Jane Austen</p>
+                                                <p class="book-return">Qaytarılma tarixi: <span
+                                                        class="danger">10.04.2025 (gecikmiş)</span></p>
+                                            </div>
+                                            <div class="order-book-action">
+                                                <button class="btn btn-sm">Qaytarmaq</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Şifrə dəyişmə bölməsi -->
+                    <div id="change-password" class="tab-pane">
+                        <div class="profile-card">
+                            <h3>Şifrəni dəyiş</h3>
+                            <form id="changePasswordForm" class="change-password-form">
+                                <div class="form-group">
+                                    <label for="currentPassword">Hazırki şifrə</label>
+                                    <input type="password" id="currentPassword" name="currentPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword">Yeni şifrə</label>
+                                    <input type="password" id="newPassword" name="newPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmNewPassword">Yeni şifrəni təsdiqləyin</label>
+                                    <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn">Şifrəni dəyiş</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-book"></i> Elektron Kitabxana</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Keçidlər</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="books.html">Kitablar</a></li>
+                        <li><a href="profile.html">Hesabım</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Sosial şəbəkələr</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Elektron Kitabxana. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
