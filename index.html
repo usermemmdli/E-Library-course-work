@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elektron Kitabxana - Ana Səhifə</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
@@ -19,8 +19,15 @@
                 <ul>
                     <li><a href="index.html" class="active">Ana Səhifə</a></li>
                     <li><a href="books.html">Kitablar</a></li>
-                    <li><a href="login.html">Giriş</a></li>
-                    <li><a href="register.html">Qeydiyyat</a></li>
+                    <li th:if="${not #authorization.expression('isAuthenticated()')}">
+                        <a href="login.html">Giriş</a>
+                    </li>
+                    <li th:if="${not #authorization.expression('isAuthenticated()')}"><a
+                            href="register.html">Qeydiyyat</a>
+                    </li>
+                    <li th:if="${#authorization.expression('isAuthenticated()')}">
+                        <a href="profile.html">Profil</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -30,8 +37,10 @@
         <div class="container">
             <div class="hero-content">
                 <h2>Kitabxanamıza xoş gəlmisiniz</h2>
-                <p>Zəngin məzmunlu kitab kolleksiyamızla tanış olun və öz maraq dairənizə uyğun ədəbiyyatı asanlıqla tapın.
-                    Kitabxanamız müxtəlif janrlarda yerli və xarici müəlliflərin əsərlərini təqdim edir. Burada həm klassiklərə, 
+                <p>Zəngin məzmunlu kitab kolleksiyamızla tanış olun və öz maraq dairənizə uyğun ədəbiyyatı asanlıqla
+                    tapın.
+                    Kitabxanamız müxtəlif janrlarda yerli və xarici müəlliflərin əsərlərini təqdim edir. Burada həm
+                    klassiklərə,
                     həm də müasir ədəbiyyata rast gələ bilərsiniz.</p>
                 <a href="books.html" class="btn">Kitablara Baxın</a>
             </div>
@@ -167,7 +176,7 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

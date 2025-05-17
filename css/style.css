@@ -498,6 +498,27 @@ footer {
     gap: 10px;
 }
 
+#message-box {
+    position: fixed;
+    top: 20px;
+    right: 650px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#message-box.error {
+    background-color: #f44336; /* qırmızı (error) üçün */
+}
+
+#message-box.success {
+    background-color: #039303; /* success üçün */
+}
+
 /* -------------------- Books Page -------------------- */
 .books-header {
     background-color: #f9f9f9;
@@ -767,3 +788,7 @@ footer {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+
+
+
